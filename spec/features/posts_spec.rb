@@ -9,6 +9,7 @@ feature "Posts" do
 
       posts.each do |post|
         expect(page).to have_content(post.title)
+        expect(page).to have_content(post.body)
       end
     end
   end

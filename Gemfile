@@ -11,6 +11,7 @@ gem 'bootstrap-sass', '~> 3.1.1'
 gem 'simple_form'
 
 gem 'draper'
+gem 'kramdown'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
