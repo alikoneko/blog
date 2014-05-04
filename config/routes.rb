@@ -4,4 +4,8 @@ Rails.application.routes.draw do
       get :archive
     end
   end
+
+  namespace :admin do
+    resources :posts
+  end
 end
