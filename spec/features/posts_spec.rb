@@ -13,4 +13,13 @@ feature "Posts" do
       end
     end
   end
+  feature "Guest views a single post" do
+    given!(:post) { create :published_post }
+    scenario do
+      visit post_path(post.id)
+
+      expect(page).to have_content(post.title)
+      expect(page).to have_content(post.body)
+    end
+  end
 end
