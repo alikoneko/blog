@@ -22,4 +22,9 @@ feature "Posts" do
       expect(page).to have_content(post.body)
     end
   end
+  feature "Guest views archive" do
+    scenario do
+      visit archive_posts_path
+    end
+  end
 end
