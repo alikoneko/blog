@@ -43,13 +43,13 @@ feature "admin/posts" do
     scenario do
       visit edit_admin_post_path(post.id)
 
-      fill_in :post_title, with: "editted post"
+      fill_in :post_title, with: "edited post"
       fill_in :post_body, with: "\n\nedited!"
       select "Published", from: :post_status
 
       click_button :submit_post
 
-      expect(page).to have_content("Post editted")
+      expect(page).to have_content("Post edited")
     end
   end
 
