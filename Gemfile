@@ -9,7 +9,7 @@ gem 'sqlite3'
 gem 'sass-rails', '>= 3.2'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'simple_form'
-
+#markdown and layout stuffs
 gem 'draper'
 gem 'kramdown'
 gem 'kaminari'
@@ -32,6 +32,10 @@ gem 'bcrypt', '~> 3.1.7'
 
 #enumerize
 gem 'enumerize'
+
+#taggable
+# Tags
+gem 'acts-as-taggable-on', '~> 3.0.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'
