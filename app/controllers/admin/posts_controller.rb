@@ -19,10 +19,26 @@ module Admin
 
       if @post.save
         flash[:notice] = "Post submitted"
-        redirect_to [:admin,@post]
+        redirect_to [:admin, @post]
       else
         render :new
       end
+    end
+
+    def edit
+      @post = Post.find(params[:id])
+    end
+
+    def update
+      @post = Post.find(params[:id])
+
+      if @post.save
+        flash[:notice] = "Post editted"
+        redirect_to [:admin, @post]
+      else
+        render :edit
+      end
+
     end
 
     private
