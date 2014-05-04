@@ -10,6 +10,10 @@ module Admin
       @post = Post.find(params[:id])
     end
 
+    def show_all
+      @post = Post.all
+    end
+
     def new
       @post = Post.new
     end
