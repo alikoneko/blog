@@ -24,4 +24,17 @@ feature "admin/posts" do
       expect(page).to have_content(post.body)
     end
   end
+
+  feature "ali adds a new post" do
+    scenario do
+      visit new_admin_post_path
+
+      fill_in :post_title, with: "testes"
+      fill_in :post_body, with: "testicles"
+
+      click_button :submit_post
+
+      expect(page).to have_content("Post submitted")
+    end
+  end
 end
