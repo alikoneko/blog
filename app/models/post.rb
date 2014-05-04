@@ -3,7 +3,7 @@ class Post < ActiveRecord::Base
   validates :title, presence: true
   validates :body, presence: true
 
-  enumerize :status, in: { draft: 1, published: 2 }, default: :draft, scope: true
+  enumerize :status, in: { draft: 1, published: 2, deleted: 3 }, default: :draft, scope: true
 
   scope :published, -> { with_status(:published) }
 

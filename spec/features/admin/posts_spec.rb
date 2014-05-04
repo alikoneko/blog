@@ -53,14 +53,4 @@ feature "admin/posts" do
     end
   end
 
-  feature "ali deletes a post" do
-    given!(:post) { create :published_post }
-    scenario do
-      visit admit_post_path(:id)
-
-      click_button :delete_post
-
-      expect(page).to have_content("Post deleted.")
-    end
-  end
 end

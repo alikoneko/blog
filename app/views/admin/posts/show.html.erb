@@ -1,1 +1,5 @@
-<%= render partial: 'post', locals: { post: post } %>
+<h1><%= post.title %></h1>
+<h3><%= post.updated_at%></h3>
+<div>
+    <%= post.render_body %>
+</div>
