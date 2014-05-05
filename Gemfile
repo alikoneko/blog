@@ -8,11 +8,13 @@ gem 'sqlite3'
 # CSS Stuffs
 gem 'sass-rails', '>= 3.2'
 gem 'bootstrap-sass', '~> 3.1.1'
-gem 'simple_form'
+gem 'simple_form', '~> 3.1.0.rc1'
+
 #markdown and layout stuffs
 gem 'draper'
 gem 'kramdown'
 gem 'kaminari'
+
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

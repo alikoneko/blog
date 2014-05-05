@@ -1,11 +1,23 @@
-<h1><%= post.title %></h1>
-<h3><%= post.updated_at%></h3>
-<div>
-    <%= post.render_body %>
-</div>
-<div>
-    <%= link_to "edit", [:edit, :admin, post] %>
-</div>
-<div>
-    <%= post.tag_list %>
+<div class="panel-primary panel">
+    <div class="panel-heading">
+        <h2 class="panel-title clearfix">
+            <%= post.title %>
+            <small>by Ali at <%= post.updated_at%></small>
+            <div class="pull-right">
+                <%= link_to [:edit, :admin, post], class:"btn btn-success btn-xs" do %><i class="glyphicon glyphicon-pencil"></i><% end %>
+            </div>
+        </h2>
+
+    </div>
+
+    <div class="panel-body">
+        <%= post.render_body %>
+    </div>
+    <div class=" tags panel-footer">
+        <% post.tag_list.each do |tag| %>
+        <span class="label label-info">
+            <%= tag %>
+        </span>
+        <% end %>
+    </div>
 </div>

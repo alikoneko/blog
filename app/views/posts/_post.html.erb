@@ -1,8 +1,20 @@
-<h1><%= post.title %></h1>
-<h3><%= post.updated_at%></h3>
-<div>
-    <%= post.render_body %>
-</div>
-<div>
-    <%= post.tag_list %>
+<div class="panel-primary panel">
+    <div class="panel-heading">
+        <h2 class="panel-title">
+            <%= post.title %>
+            <small>by Ali at <%= post.updated_at%></small>
+        </h2>
+
+    </div>
+
+    <div class="panel-body">
+        <%= post.render_body %>
+    </div>
+    <div class=" tags panel-footer">
+        <% post.tag_list.each do |tag| %>
+        <span class="label label-info">
+            <%= tag %>
+        </span>
+        <% end %>
+    </div>
 </div>

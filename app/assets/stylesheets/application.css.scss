@@ -1,0 +1,22 @@
+@import "bootstrap";
+@import "bootswatch";
+
+.panel-title {
+  small {
+    color: white;
+  }
+}
+
+.panel-primary {
+  .panel-heading {
+    margin: -1px -1px 0px;
+  }
+
+  border-color: #ddd;
+}
+
+.tags {
+  .label {
+    margin-right: 5px;
+  }
+}

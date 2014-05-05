@@ -1,28 +1,38 @@
-<h1> Welcome, Ali </h1>
-<div>
-    <div>
+<h1 class="clearfix">
+    Welcome, Ali
+    <div class="pull-right">
         <% if params[:show_all].present? %>
-            <%= link_to "Show Current", [:admin, :posts] %>
+            <%= link_to "Show Current", [:admin, :posts], class: 'btn btn-danger' %>
         <% else %>
-            <%= link_to "Show Historical", polymorphic_path([:admin, :posts], show_all: true) %>
+            <%= link_to "Show All", polymorphic_path([:admin, :posts], show_all: true), class: 'btn btn-danger' %>
         <% end %>
+        <%= link_to "New", [:new, :admin, :post], class:"btn btn-info" %>
     </div>
-    <table>
+</h1>
+<div>
+    <table  class="table table-hover">
         <tr>
-            <td>title</td>
-            <td>tags</td>
-            <td>status</td>
-            <td>created at</td>
-            <td>updated at</td>
+            <th>title</th>
+            <th>tags</th>
+            <th>status</th>
+            <th>created at</th>
+            <th>updated at</th>
+            <th></th>
         </tr>
         <% @posts.each do |post|%>
             <tr>
                 <td><%= link_to post.title, [:admin, post] %></td>
-                <td><%= post.tag_list %>
+                <td class="tags">
+                    <% post.tag_list.each do |tag| %>
+                        <span class="label label-info">
+                            <%= tag %>
+                        </span>
+                    <% end %>
+                </td>
                 <td><%= post.status %></td>
                 <td><%= post.created_at %></td>
                 <td><%= post.updated_at %></td>
-                <td><%= link_to "edit", [:edit, :admin, post] %></td>
+                <td><%= link_to [:edit, :admin, post], class:"btn btn-success btn-xs" do %><i class="glyphicon glyphicon-pencil"></i><% end %></td>
             </tr>
         <% end %>
     </table>
