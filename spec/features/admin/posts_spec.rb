@@ -1,8 +1,9 @@
 require 'spec_helper'
 
 feature "admin/posts" do
+
   feature "ali views blog home page" do
-    given!(:posts) { 3.times.map { create :published_post } }
+    given!(:posts) { 3.times.map { create :published_post, tag_list: "tagged"  } }
 
     scenario do
       visit admin_posts_path
@@ -14,7 +15,7 @@ feature "admin/posts" do
   end
 
   feature "ali views a single post" do
-    given!(:post) { create :published_post }
+    given!(:post) { create :published_post, tag_list: "tagged"  }
 
     scenario do
 
@@ -22,6 +23,7 @@ feature "admin/posts" do
 
       expect(page).to have_content(post.title)
       expect(page).to have_content(post.body)
+      expect(page).to have_content(post.tag_list)
     end
   end
 
@@ -31,6 +33,7 @@ feature "admin/posts" do
 
       fill_in :post_title, with: "testes"
       fill_in :post_body, with: "testicles"
+      fill_in :post_tag_list, with: "toasties"
 
       click_button :submit_post
 
@@ -39,12 +42,14 @@ feature "admin/posts" do
   end
 
   feature "ali edits a post" do
-    given!(:post) { create :published_post}
+    given!(:post) { create :published_post, tag_list: "tagged" }
     scenario do
       visit edit_admin_post_path(post.id)
 
       fill_in :post_title, with: "edited post"
       fill_in :post_body, with: "\n\nedited!"
+      fill_in :post_tag_list, with: ",tested"
+
       select "Published", from: :post_status
 
       click_button :submit_post

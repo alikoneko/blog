@@ -48,7 +48,7 @@ module Admin
 
     private
     def post_params
-      params.require(:post).permit(:title, :body, :status)
+      params.require(:post).permit(:title, :body, :status, :tag_list)
     end
   end
 end
