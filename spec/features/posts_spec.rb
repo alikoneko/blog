@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 feature "posts" do
+
   feature "Guest views blog home page" do
     given!(:posts) { 3.times.map { create :published_post, tag_list: "tagz"  } }
 
@@ -14,6 +15,7 @@ feature "posts" do
       end
     end
   end
+
   feature "Guest views a single post" do
     given!(:post) { create :published_post, tag_list: "tagz" }
 
@@ -26,6 +28,7 @@ feature "posts" do
       expect(page).to have_content(post.tag_list)
     end
   end
+
   feature "Guest views archive" do
     given!(:posts) { 3.times.map { create :published_post, tag_list: "tagz"  } }
     scenario do
