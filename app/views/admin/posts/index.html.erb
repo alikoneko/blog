@@ -1,12 +1,27 @@
 <h1> Welcome, Ali </h1>
 <div>
+    <div>
+        <% if params[:show_all].present? %>
+            <%= link_to "Show Current", [:admin, :posts] %>
+        <% else %>
+            <%= link_to "Show Historical", polymorphic_path([:admin, :posts], show_all: true) %>
+        <% end %>
+    </div>
     <table>
-    <% @posts.each do |post|%>
         <tr>
-            <td><%= post.title %></td>
-            <td><%= link_to "edit", [:edit, :admin, post] %></td>
-            <td><%= post.status %></td>
+            <td>title</td>
+            <td>status</td>
+            <td>created at</td>
+            <td>updated at</td>
         </tr>
-    <% end %>
+        <% @posts.each do |post|%>
+            <tr>
+                <td><%= post.title %></td>
+                <td><%= post.status %></td>
+                <td><%= post.created_at %></td>
+                <td><%= post.updated_at %></td>
+                <td><%= link_to "edit", [:edit, :admin, post] %></td>
+            </tr>
+        <% end %>
     </table>
 </div>

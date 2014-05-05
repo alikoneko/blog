@@ -3,15 +3,16 @@ module Admin
     decorates_assigned :post, :posts
 
     def index
-      @posts = Post.current
+      if params[:show_all].present?
+        @posts = Post.all
+      else
+        @posts = Post.current
+      end
+
     end
 
     def show
       @post = Post.find(params[:id])
-    end
-
-    def show_all
-      @post = Post.all
     end
 
     def new
