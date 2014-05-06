@@ -7,6 +7,7 @@ class Post < ActiveRecord::Base
 
   enumerize :status, in: { draft: 1, published: 2, deleted: 3 }, default: :draft, scope: true
 
+  default_scope { order 'created_at DESC' }
   scope :published, -> { with_status(:published) }
   scope :current, -> { without_status(:deleted) }
 
