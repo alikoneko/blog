@@ -14,6 +14,7 @@ gem 'simple_form', '~> 3.1.0.rc1'
 gem 'draper'
 gem 'kramdown'
 gem 'kaminari'
+gem 'bootstrap-kaminari-views'
 
 
 # Use Uglifier as compressor for JavaScript assets

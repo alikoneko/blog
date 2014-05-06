@@ -9,8 +9,8 @@
             <a class="navbar-brand" href="#">Brand</a>
         </div>
         <ul class="nav navbar-nav">
-            <li><a href="#">blog</a></li>
-            <li><a href="">archive</a></li>
+            <li><%= link_to "blog", [:posts]%></li>
+            <li><%= link_to "archive", [:archive,:posts]%></li>
         </ul>
     </div>
     </div>

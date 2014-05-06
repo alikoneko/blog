@@ -1,22 +1,26 @@
 @import "bootstrap";
-@import "bootswatch";
+@import "bootswatch-lumen";
 
-.panel-title {
-  small {
-    color: white;
-  }
+body {
+  background-color: #fcfcfc;
 }
 
-.panel-primary {
-  .panel-heading {
-    margin: -1px -1px 0px;
-  }
-
-  border-color: #ddd;
+.panel-footer {
+  border-radius: 0px !important;
 }
 
 .tags {
   .label {
     margin-right: 5px;
+  }
+}
+
+.panel-post {
+  .panel-heading {
+    background-color: #34495e;
+    color: white;
+    small {
+      color: #fafafa;
+    }
   }
 }

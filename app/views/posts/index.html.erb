@@ -1,4 +1,4 @@
 <% posts.each do |post| %>
     <%= render partial: 'post', locals: { post: post }%>
 <% end %>
-<%= paginate @posts, page_links: false %>
+<%= paginate @posts, theme: 'twitter-bootstrap-3' %>
