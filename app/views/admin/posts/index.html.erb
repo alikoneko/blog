@@ -25,7 +25,7 @@
             <td class="tags">
                 <% post.tag_list.each do |tag| %>
                         <span class="label label-info">
-                            <%= tag %>
+                            <%= link_to tag, tag_path(tag) %>
                         </span>
                 <% end %>
             </td>
