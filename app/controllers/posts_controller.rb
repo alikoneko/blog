@@ -12,5 +12,4 @@ class PostsController < ApplicationController
   def archive
     @posts = Post.published
   end
-
 end
