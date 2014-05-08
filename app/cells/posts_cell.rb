@@ -1,7 +1,7 @@
 class PostsCell < Cell::Base
 
   def recent
-    @posts = Posts.recent
+    @posts = Post.recent
     render
   end
 
