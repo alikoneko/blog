@@ -43,6 +43,10 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    cells (3.10.1)
+      actionpack (>= 3.0)
+      railties (>= 3.0)
+      uber (~> 0.0.4)
     childprocess (0.5.3)
       ffi (~> 1.0, >= 1.0.11)
     coffee-rails (4.0.1)
@@ -164,6 +168,7 @@ GEM
       coffee-rails
     tzinfo (1.1.0)
       thread_safe (~> 0.1)
+    uber (0.0.6)
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
@@ -180,6 +185,7 @@ DEPENDENCIES
   bootstrap-kaminari-views
   bootstrap-sass (~> 3.1.1)
   capybara
+  cells
   coffee-rails (~> 4.0.0)
   database_cleaner
   draper

@@ -15,6 +15,7 @@ gem 'draper'
 gem 'kramdown'
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
+gem 'cells'
 
 
 # Use Uglifier as compressor for JavaScript assets
