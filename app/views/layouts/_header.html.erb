@@ -11,7 +11,9 @@
         <ul class="nav navbar-nav">
             <li><%= link_to "blog", [:posts]%></li>
             <li><%= link_to "archive", [:archive,:posts]%></li>
+            <% if current_user.present? %>
+                <li><%= link_to [:sessions], method: :delete do %><i class="glyphicon glyphicon-log-out"></i> log out<% end %></li>
+            <% end %>
         </ul>
-    </div>
     </div>
 </header>
