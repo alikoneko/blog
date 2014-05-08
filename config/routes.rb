@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :posts
   end
+
+  resource :sessions, path: 'session'
 end

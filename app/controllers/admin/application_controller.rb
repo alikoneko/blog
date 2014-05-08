@@ -4,7 +4,7 @@ module Admin
 
     private
     def ensure_admin
-
+      redirect_to [:new, :sessions] unless current_user.present?
     end
   end
 end
