@@ -1,5 +1,5 @@
 module Admin
-  class PostsController < ApplicationController
+  class PostsController < Admin::ApplicationController
     decorates_assigned :post, :posts
 
     def index

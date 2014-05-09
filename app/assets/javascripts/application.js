@@ -25,3 +25,4 @@ function processTimeZones() {
 }
 
 $(document).ready(processTimeZones);
+$(document).on('page:load', processTimeZones);
