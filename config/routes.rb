@@ -1,11 +1,4 @@
 Rails.application.routes.draw do
-  resources :posts, path: '' do
-    collection do
-      get :archive
-
-    end
-  end
-
   get 'tags/:tag', to: 'posts#index', as: :tag
 
   namespace :admin do
@@ -14,4 +7,10 @@ Rails.application.routes.draw do
 
   resource :sessions, path: 'session'
 
+  resources :posts, path: '' do
+    collection do
+      get :archive
+
+    end
+  end
 end

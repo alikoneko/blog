@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
 
   def destroy
     self.current_user = nil
-    redirect_to [:root]
+    redirect_to [:posts]
   end
 
   private
