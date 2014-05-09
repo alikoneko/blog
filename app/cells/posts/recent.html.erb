@@ -2,9 +2,9 @@
     <div class="panel-heading">
         <h2 class="panel-title">Recent Posts</h2>
     </div>
-    <div class="panel-body">
+    <div class="list-group">
         <% @posts.each do |post| %>
-            <p><%= link_to post.title, post %></p>
+            <%= link_to post.title, post, class:"list-group-item" %>
         <%end%>
     </div>
 </div>
