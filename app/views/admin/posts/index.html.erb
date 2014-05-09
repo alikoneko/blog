@@ -21,7 +21,7 @@
     </tr>
     <% posts.each do |post|%>
         <tr>
-            <td><%= link_to post.title, [:admin, post] %></td>
+            <td><%= post.render_title %></td>
             <td class="tags">
                 <%= post.render_tag_list %>
             </td>

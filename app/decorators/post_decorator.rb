@@ -5,6 +5,10 @@ class PostDecorator < Draper::Decorator
     Markdown.new.render(object.body).html_safe
   end
 
+  def render_title(*scope)
+    h.link_to title, [*scope, object]
+  end
+
   def render_created_at
     h.content_tag :span, object.created_at, class: 'time zone unprocessed', data: { utc: object.created_at.to_i }
   end

@@ -2,7 +2,7 @@
     <div class="panel-post panel">
         <div class="panel-heading">
             <h2 class="panel-title">
-                <%= link_to post.title, post %>
+                <%= post.render_title %>
                 <small>by Ali at <%= post.render_created_at %></small>
                 <% if current_user.present? %>
                     <div class="pull-right">
