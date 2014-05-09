@@ -2,7 +2,6 @@ class PostsCell < Cell::Rails
 
   def recent
     @posts = Post.published.limit(3)
-
     render
   end
 
@@ -11,7 +10,4 @@ class PostsCell < Cell::Rails
     render
   end
 
-  def about
-    render
-  end
 end

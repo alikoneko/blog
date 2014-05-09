@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.2'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'simple_form', '~> 3.1.0.rc1'
+gem 'font-awesome-sass'
 
 #markdown and layout stuffs
 gem 'draper'
