@@ -1,3 +1,5 @@
+//= require 'font-awesome'
+
 @import "bootstrap";
 @import "bootswatch-lumen";
 
@@ -7,6 +9,7 @@ $secondary-color: #c0392b; //dark-red
 $secondary-color-shadow: darken($secondary-color, 5%);
 $background: #fcfcfc; //offwhite
 $text-with-dark-bg: lighten($background, 5%);
+$footer-text: #bdc3c7;
 
 
 body {
@@ -56,4 +59,9 @@ body {
 .pagination > .active > span:focus {
   background-color: $primary-color;
   border-color: $primary-color-shadow;
+}
+
+.footer {
+  color: $footer-text;
+  font-size: small;
 }
