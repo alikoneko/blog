@@ -23,7 +23,6 @@ body {
 .tags {
   .label {
     margin-right: 5px;
-
   }
 }
 
@@ -44,6 +43,11 @@ body {
 }
 
 .tag-cloud {
+  text-align: center;
+  .label {
+    display: inline-block;
+    margin: 3px 2px;
+  }
   .s { font-size: 80%; }
   .m { font-size: 100%; }
   .l { font-size: 120%; }
