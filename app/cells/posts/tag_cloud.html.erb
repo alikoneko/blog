@@ -2,9 +2,12 @@
     <div class="panel-heading">
         <h2 class="panel-title">Tags</h2>
     </div>
-    <div class="panel-body tag-cloud">
+    <div class="panel-body tag-cloud tags">
         <% tag_cloud(@tags, %w[s m l]) do |tag, css_class| %>
-            <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+            <span class="label label-tags">
+                <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+            </span>
         <% end %>
+
     </div>
 </div>

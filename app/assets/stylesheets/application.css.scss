@@ -12,11 +12,14 @@ body {
 .tags {
   .label {
     margin-right: 5px;
+
   }
 }
 
 .label-tags {
-  background-color: #f1c40f;
+  background-color: #c0392b;
+  a{ color: white; }
+
 }
 
 .panel-post {
