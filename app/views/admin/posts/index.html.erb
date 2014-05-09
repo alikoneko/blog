@@ -23,11 +23,7 @@
         <tr>
             <td><%= link_to post.title, [:admin, post] %></td>
             <td class="tags">
-                <% post.tag_list.each do |tag| %>
-                        <span class="label label-tags">
-                            <%= link_to tag, tag_path(tag) %>
-                        </span>
-                <% end %>
+                <%= post.render_tag_list %>
             </td>
             <td><%= post.status %></td>
             <td><%= post.render_created_at %></td>

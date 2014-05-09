@@ -14,10 +14,6 @@
         <%= post.render_body %>
     </div>
     <div class=" tags panel-footer">
-        <% post.tag_list.each do |tag| %>
-        <span class="label label-tags">
-            <%= link_to tag, tag_path(tag) %>
-        </span>
-        <% end %>
+        <%= post.render_tag_list %>
     </div>
 </div>
