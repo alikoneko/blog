@@ -1,19 +1,23 @@
-<div class="panel-post panel">
-    <div class="panel-heading">
-        <h2 class="panel-title">
-            <%= link_to post.title, post %>
-            <small>by Ali at <%= post.render_created_at %></small>
-            <% if current_user.present? %>
-                <div class="pull-right">
-                    <%= link_to [:edit, :admin, post], class:"btn btn-success btn-xs" do %><i class="glyphicon glyphicon-pencil"></i><% end %>
-                </div>
-            <% end %>
-        </h2>
-    </div>
-    <div class="panel-body">
-        <%= post.render_body %>
-    </div>
-    <div class="tags panel-footer">
-        <%= post.render_tag_list %>
+<div class="col-md-9">
+    <div class="panel-post panel">
+        <div class="panel-heading">
+            <h2 class="panel-title">
+                <%= link_to post.title, post %>
+                <small>by Ali at <%= post.render_created_at %></small>
+                <% if current_user.present? %>
+                    <div class="pull-right">
+                        <%= link_to [:edit, :admin, post], class:"btn btn-success btn-xs" do %><i class="glyphicon glyphicon-pencil"></i><% end %>
+                    </div>
+                <% end %>
+            </h2>
+        </div>
+        <div class="panel-body">
+            <%= post.render_body %>
+        </div>
+        <div class="tags panel-footer">
+            <%= post.render_tag_list %>
+        </div>
     </div>
 </div>
+
+
