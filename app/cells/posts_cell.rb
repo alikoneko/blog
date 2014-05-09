@@ -10,4 +10,8 @@ class PostsCell < Cell::Rails
     @tags = Post.published.tag_counts_on(:tags)
     render
   end
+
+  def about
+    render
+  end
 end
