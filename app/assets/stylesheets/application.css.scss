@@ -65,3 +65,23 @@ body {
   color: $footer-text;
   font-size: small;
 }
+
+.btn-primary-theme{
+  background-color: $primary-color;
+  border-color: $primary-color-shadow;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: $secondary-color;
+  border-color: $secondary-color-shadow;
+  color:white;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active,
+.open .dropdown-toggle.btn-primary {
+  color: #ffffff;
+}

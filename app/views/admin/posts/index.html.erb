@@ -2,11 +2,11 @@
     Welcome, Ali
     <div class="pull-right">
         <% if params[:show_all].present? %>
-            <%= link_to "Show Current", [:admin, :posts], class: 'btn btn-danger' %>
+            <%= link_to "Show Current", [:admin, :posts], class: 'btn btn-secondary' %>
         <% else %>
-            <%= link_to "Show All", polymorphic_path([:admin, :posts], show_all: true), class: 'btn btn-danger' %>
+            <%= link_to "Show All", polymorphic_path([:admin, :posts], show_all: true), class: 'btn btn-secondary' %>
         <% end %>
-        <%= link_to "New", [:new, :admin, :post], class:"btn btn-info" %>
+        <%= link_to "New", [:new, :admin, :post], class:"btn btn-primary-theme" %>
     </div>
 </h1>
 
