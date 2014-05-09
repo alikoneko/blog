@@ -2,7 +2,7 @@
     <div class="panel-heading">
         <h2 class="panel-title">
             <%= link_to post.title, post %>
-            <small>by Ali at <%= post.created_at.localtime.strftime("%A, %B %e, %Y at %I:%M%p") %></small>
+            <small>by Ali at <%= post.render_created_at %></small>
         </h2>
     </div>
     <div class="panel-body">

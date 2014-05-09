@@ -20,6 +20,7 @@ class SessionsController < ApplicationController
 
   def destroy
     self.current_user = nil
+    flash[:notice] = self.current_user
     redirect_to [:posts]
   end
 

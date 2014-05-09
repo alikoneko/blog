@@ -2,7 +2,7 @@
     <div class="panel-heading">
         <h2 class="panel-title clearfix">
             <%= post.title %>
-            <small>by Ali at <%= post.created_at.strftime("%A, %B %e, %Y at %I:%M%p")%></small>
+            <small>by Ali at <%= post.render_created_at %></small>
             <div class="pull-right">
                 <%= link_to [:edit, :admin, post], class:"btn btn-success btn-xs" do %><i class="glyphicon glyphicon-pencil"></i><% end %>
             </div>

@@ -12,5 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-dateFormat.min.js
 //= require turbolinks
 //= require_tree .
+
+function processTimeZones() {
+    var zoneString = /\((.*)\)/.exec(new Date().toString())[1];
+    $('.time.zone.unprocessed').each(function(index, object) {
+        $(object).removeClass('unprocessed');
+        $(object).html($.format.toBrowserTimeZone($(object).data('utc') * 1000, "MMMM d, yyyy, h:mm:ss a") + " " + zoneString);
+    });
+}
+
+$(document).ready(processTimeZones);
