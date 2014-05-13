@@ -2,11 +2,11 @@
     <% if current_user.present? %>
         <div class="panel panel-default">
             <div class="panel-heading">
-                Admin Utility Quicklinks
+                <h2 class="panel-title">Admin Utility Quicklinks</h2>
             </div>
             <div class="panel-body center">
-                <%= link_to "New", [:new, :admin, :post], class:"btn btn-primary-theme" %>
-                <%= link_to "Admin Panel", [:admin, :posts], class:"btn btn-primary-theme"%>
+                <%= link_to "New", [:new, :admin, :post], class:"btn btn-secondary" %>
+                <%= link_to "Admin Panel", [:admin, :posts], class:"btn btn-secondary"%>
             </div>
         </div>
     <% end %>
