@@ -6,7 +6,7 @@
                 <small>by Ali at <%= post.render_created_at %></small>
                 <% if current_user.present? %>
                     <div class="pull-right">
-                        <%= link_to [:edit, :admin, post], class:"btn btn-success btn-xs" do %><i class="glyphicon glyphicon-pencil"></i><% end %>
+                        <%= post.render_edit_button  %>
                     </div>
                 <% end %>
             </h2>

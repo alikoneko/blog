@@ -27,4 +27,7 @@ class PostDecorator < Draper::Decorator
     end
   end
 
+  def render_edit_button
+    h.link_to(h.content_tag(:i, '',class: 'glyphicon glyphicon-pencil'),h.polymorphic_path([:edit, :admin, object]), class:'btn btn-success btn-xs')
+  end
 end

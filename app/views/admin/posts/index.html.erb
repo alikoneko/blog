@@ -28,7 +28,7 @@
             <td><%= post.status %></td>
             <td><%= post.render_created_at %></td>
             <td><%= post.render_updated_at %></td>
-            <td><%= link_to [:edit, :admin, post], class:"btn btn-success btn-xs" do %><i class="glyphicon glyphicon-pencil"></i><% end %></td>
+            <td><%= post.render_edit_button %></td>
         </tr>
     <% end %>
 </table>
