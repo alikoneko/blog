@@ -14,6 +14,6 @@ class PostsController < ApplicationController
   end
 
   def archive
-    @posts = Post.published
+    @posts = Post.published.page params[:page]
   end
 end
