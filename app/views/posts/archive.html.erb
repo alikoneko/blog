@@ -12,6 +12,9 @@
         <td><%= post.render_title %></td>
         <td class="tags"><%= post.render_tag_list %></td>
         <td><%= post.render_created_at %></td>
+        <% if current_user.present? %>
+            <td><%= post.render_edit_button %></td>
+        <% end %>
     </tr>
     <% end %>
 </table>
