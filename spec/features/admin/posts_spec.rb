@@ -2,6 +2,9 @@ require 'spec_helper'
 
 feature "admin/posts" do
 
+  let!(:user){ create :user }
+  before { sign_in user }
+
   feature "ali views blog home page" do
     given!(:posts) { 3.times.map { create :published_post, tag_list: "tagged"  } }
 
