@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
 
   def destroy
     self.current_user = nil
-    flash[:notice] = self.current_user
+    flash[:notice] = "You have logged out"
     redirect_to [:posts]
   end
 
