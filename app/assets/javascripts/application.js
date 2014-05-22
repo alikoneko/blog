@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-dateFormat.min.js
+//= require bootstrap.min.js
 //= require turbolinks
 //= require_tree .
 
