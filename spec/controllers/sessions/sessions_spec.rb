@@ -40,4 +40,23 @@ describe SessionsController do
     end
   end
 
+  context "with a logged in user" do
+    let(:user){ create :user }
+    before { sign_in user }
+
+    describe "#destroy" do
+      it "unsets the session" do
+        delete :destroy
+
+        expect(session[:user_id]).to be_nil
+      end
+
+      it "redirects to root" do
+        delete :destroy
+
+        expect(response).to redirect_to('/')
+      end
+    end
+  end
+
 end

@@ -1,6 +1,6 @@
 module Controllers
   module SessionHelper
-    def sign_in (user)
+    def sign_in user
       session[:user_id] = user.id
     end
   end
