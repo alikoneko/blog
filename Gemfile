@@ -12,11 +12,11 @@ gem 'simple_form', '~> 3.1.0.rc1'
 gem 'font-awesome-sass'
 
 #markdown and layout stuffs
-gem 'draper'
-gem 'kramdown'
-gem 'kaminari'
+gem 'draper', '~> 1.3.0'
+gem 'kramdown', '~> 1.3.3'
+gem 'kaminari', '~> 0.15.1'
 gem 'bootstrap-kaminari-views'
-gem 'cells'
+gem 'cells', '~> 3.10.1'
 
 
 # Use Uglifier as compressor for JavaScript assets
@@ -36,23 +36,24 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'bcrypt', '~> 3.1.7'
 
 #enumerize
-gem 'enumerize'
+gem 'enumerize', '~> 0.8.0'
 
 #taggable
 # Tags
 gem 'acts-as-taggable-on', '~> 3.0.2'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+# Deployment framework
+gem 'capistrano', '~> 2.15.5'
+gem 'rvm-capistrano', '~> 1.5.1'
 
 group :development, :test do
-  gem 'capybara'
-  gem 'rspec-rails'
-  gem 'selenium-webdriver'
-  gem 'factory_girl_rails'
-  gem 'database_cleaner'
-  gem 'rspec-cells'
+  gem 'capybara', '~> 2.2.1'
+  gem 'rspec-rails', '~> 2.14.2'
+  gem 'selenium-webdriver', '~> 2.41.0'
+  gem 'factory_girl_rails', '~> 4.4.1'
+  gem 'database_cleaner', '~> 1.2.0'
+  gem 'rspec-cells', '~> 0.1.12'
 end
