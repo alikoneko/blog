@@ -23,5 +23,3 @@ describe PostsCell do
   end
 
 end
-#TODO test the functionality of it having posts. ask james about this
-#TODO ask if I should just have a mailto or a contact me page...leaning more towards the form, but want a 2nd opinion.
