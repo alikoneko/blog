@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140506182003) do
+ActiveRecord::Schema.define(version: 20140606003459) do
 
   create_table "posts", force: true do |t|
     t.integer  "status"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20140506182003) do
     t.datetime "updated_at"
   end
 
+  add_index "posts", ["created_at"], name: "index_posts_on_created_at"
   add_index "posts", ["status"], name: "index_posts_on_status"
 
   create_table "taggings", force: true do |t|
