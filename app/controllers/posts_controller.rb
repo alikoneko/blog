@@ -2,11 +2,9 @@ class PostsController < ApplicationController
   decorates_assigned :post, :posts
 
   def index
-    if params[:tag]
-      @posts =  Post.published.tagged_with(params[:tag]).page params[:page]
-    else
-      @posts = Post.published.page params[:page]
-    end
+    @posts = Post.published
+    @posts = @posts.tagged_with(params[:tag]) if params[:tag].present?
+    @posts = @posts.page(params[:page])
   end
 
   def show

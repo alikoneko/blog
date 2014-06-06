@@ -3,12 +3,8 @@ module Admin
     decorates_assigned :post, :posts
 
     def index
-      if params[:show_all].present?
-        @posts = Post.all
-      else
-        @posts = Post.current
-      end
-
+      @posts = Post.all
+      @posts = @posts.current unless params[:show_all].present?
     end
 
     def show
@@ -37,7 +33,7 @@ module Admin
     def update
       @post = Post.find(params[:id])
 
-      if @post.update_attributes post_params
+      if @post.update_attributes(post_params)
         flash[:notice] = "Post edited"
         redirect_to [:admin, @post]
       else

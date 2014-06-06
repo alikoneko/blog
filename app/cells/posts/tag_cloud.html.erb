@@ -5,7 +5,7 @@
     <div class="panel-body tag-cloud tags">
         <% tag_cloud(@tags, %w[s m l]) do |tag, css_class| %>
             <span class="label label-tags <%= css_class %>">
-                <%= link_to tag.name, tag_path(tag.name) %>
+                <%= link_to tag.name, tag_posts_path(tag.name) %>
             </span>
         <% end %>
 

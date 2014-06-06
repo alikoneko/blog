@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'tags/:tag', to: 'posts#index', as: :tag
-
   namespace :admin do
     resources :posts
   end
@@ -10,7 +8,7 @@ Rails.application.routes.draw do
   resources :posts, path: '' do
     collection do
       get :archive
-
+      get 'tags/:tag', to: 'posts#index', as: :tag
     end
   end
 end
