@@ -1,4 +1,8 @@
-<div class="row">
-    <%= render partial: 'post', locals: { post: post }%>
-    <%= render 'layouts/aside' %>
+<div class="row clearfix">
+    <div class="col-md-3 pull-right">
+        <%= render 'layouts/aside' %>
+    </div>
+    <div class="col-md-9 pull-left">
+        <%= render partial: 'post', locals: { post: post }%>
+    </div>
 </div>
