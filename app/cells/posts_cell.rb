@@ -6,7 +6,7 @@ class PostsCell < Cell::Rails
   end
 
   def tag_cloud
-    @tags = Post.published.tag_counts_on(:tags).limit(50)
+    @tags = Post.published.tag_counts_on(:tags)
     render
   end
 
