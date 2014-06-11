@@ -11,3 +11,5 @@ class PostsCell < Cell::Rails
   end
 
 end
+
+#TODO make tags page
