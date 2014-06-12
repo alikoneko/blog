@@ -8,10 +8,14 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = Post.published.find(params[:id])
   end
 
   def archive
     @posts = Post.published
+  end
+
+  def tags
+    @tags = Post.published.tag_counts_on(:tags)
   end
 end
