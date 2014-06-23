@@ -1,7 +1,7 @@
 <div class="panel-post panel">
     <div class="panel-heading">
         <h2 class="panel-title clearfix">
-            <%= post.render_title %>
+            <%= post.render_title(:admin) %>
             <small>by Ali at <%= post.render_created_at %></small>
             <div class="pull-right">
                 <%= post.render_edit_button %>
