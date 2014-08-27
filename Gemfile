@@ -17,6 +17,7 @@ gem 'kramdown', '~> 1.3.3'
 gem 'kaminari', '~> 0.15.1'
 gem 'bootstrap-kaminari-views'
 gem 'cells', '~> 3.10.1'
+gem 'coderay', '~> 1.1.0'
 
 
 # Use Uglifier as compressor for JavaScript assets
